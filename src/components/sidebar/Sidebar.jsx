@@ -4,6 +4,7 @@ import SpaceDashboardIcon from '@mui/icons-material/SpaceDashboard';
 import PeopleAltIcon from '@mui/icons-material/PeopleAlt';
 import ProductionQuantityLimitsIcon from '@mui/icons-material/ProductionQuantityLimits';
 import GradingSharpIcon from '@mui/icons-material/GradingSharp';
+import CategoryIcon from '@mui/icons-material/Category';
 
 const Sidebar = () => {
 	return (
@@ -35,6 +36,12 @@ const Sidebar = () => {
                     <GradingSharpIcon className="icon"/>
 						<span>Orders</span>
 					</li>
+					<Link to="/categories">
+						<li>
+                            <CategoryIcon className="icon"/>
+							<span>Categories</span>
+						</li>
+					</Link>
 					<p className="title">USER</p>
 					<li>
 						<span>Profil</span>
