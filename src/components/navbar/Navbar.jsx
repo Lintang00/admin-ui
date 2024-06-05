@@ -1,8 +1,12 @@
 import "./navbar.scss";
 import SearchIcon from "@mui/icons-material/Search";
 import NightlightRoundedIcon from "@mui/icons-material/NightlightRounded";
+import { DarkModeContext } from "../../context/darkModeContext";
+import { useContext } from "react";
 
 const Navbar = () => {
+	const { dispatch } = useContext(DarkModeContext);
+
 	return (
 		<div className="navbar">
 			<div className="wrapper">
@@ -12,7 +16,8 @@ const Navbar = () => {
 				</div>
 				<div className="items">
 					<div className="item">
-						<NightlightRoundedIcon className="icon" />
+						<NightlightRoundedIcon className="icon"
+						onClick={() => dispatch({ type : "TOGGLE"})} />
 					</div>
 					<div className="item">
 						<img 
